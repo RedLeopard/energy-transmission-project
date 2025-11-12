@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Edward Thornton’s Energy Transmission Project</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+<body>
+  <div class="scene">
+    <img
+      src="{{ url_for('static', filename='img/grid.png') }}"
+      alt="Energy Transmission System"
+      class="background"
+    />
+
+    <svg class="overlay" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+      <!-- Giant Arch in the back -->
+      <path id="stl-arch-bg"
+            d="M 100 880
+               C 500 100, 1100 100, 1500 880
+               M 260 880
+               C 600 200, 1000 200, 1340 880"
+            class="arch arch-bg" />
+
+      <!-- Power lines -->
+      <path id="line-plant-sub" d="M 260 540 C 420 520, 520 520, 620 520" class="powerline"></path>
+      <path id="line-sub-tower" d="M 630 520 C 820 480, 900 460, 1020 380" class="powerline"></path>
+      <path id="line-tower-trans" d="M 1030 380 C 1080 440, 1160 500, 1220 560" class="powerline"></path>
+      <path id="line-trans-house" d="M 1230 560 C 1340 560, 1420 560, 1500 560" class="powerline"></path>
+
+      <!-- Pulses -->
+      <circle id="pulse-1" r="7" class="pulse"></circle>
+      <circle id="pulse-2" r="7" class="pulse"></circle>
+      <circle id="pulse-3" r="7" class="pulse"></circle>
+      <circle id="pulse-4" r="7" class="pulse"></circle>
+    </svg>
+
+    <div class="hud">
+      <h1>Edward Thornton’s Energy Transmission Project</h1>
+      <div class="status">
+        <span class="dot"></span>
+        <span id="status-text">Loading status…</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
