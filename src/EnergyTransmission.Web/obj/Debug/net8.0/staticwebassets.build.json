@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "MKjJh46C1poUhild8aXDCmitKNt48a0iVg4GrmL/bbw=",
+  "Hash": "yS//0hy4123TE8yVc9TPzm6K3ykRtj3hotuk9gFFVBY=",
   "Source": "EnergyTransmission.Web",
   "BasePath": "_content/EnergyTransmission.Web",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "EnergyTransmission.Web/wwwroot",
       "Source": "EnergyTransmission.Web",
-      "ContentRoot": "/Users/streetgenius/energy-transmission-project/app/EnergyTransmission.Web/wwwroot/",
+      "ContentRoot": "/Users/streetgenius/energy-transmission-project/src/EnergyTransmission.Web/wwwroot/",
       "BasePath": "_content/EnergyTransmission.Web",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "/Users/streetgenius/energy-transmission-project/app/EnergyTransmission.Web/wwwroot/css/site.css",
+      "Identity": "/Users/streetgenius/energy-transmission-project/src/EnergyTransmission.Web/wwwroot/css/site.css",
       "SourceId": "EnergyTransmission.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/streetgenius/energy-transmission-project/app/EnergyTransmission.Web/wwwroot/",
+      "ContentRoot": "/Users/streetgenius/energy-transmission-project/src/EnergyTransmission.Web/wwwroot/",
       "BasePath": "_content/EnergyTransmission.Web",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -36,10 +36,10 @@
       "OriginalItemSpec": "wwwroot/css/site.css"
     },
     {
-      "Identity": "/Users/streetgenius/energy-transmission-project/app/EnergyTransmission.Web/wwwroot/js/site.js",
+      "Identity": "/Users/streetgenius/energy-transmission-project/src/EnergyTransmission.Web/wwwroot/js/site.js",
       "SourceId": "EnergyTransmission.Web",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/streetgenius/energy-transmission-project/app/EnergyTransmission.Web/wwwroot/",
+      "ContentRoot": "/Users/streetgenius/energy-transmission-project/src/EnergyTransmission.Web/wwwroot/",
       "BasePath": "_content/EnergyTransmission.Web",
       "RelativePath": "js/site.js",
       "AssetKind": "All",

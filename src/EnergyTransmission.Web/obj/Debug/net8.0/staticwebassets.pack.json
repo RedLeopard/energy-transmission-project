@@ -1,11 +1,11 @@
 {
   "Files": [
     {
-      "Id": "/Users/streetgenius/energy-transmission-project/app/EnergyTransmission.Web/wwwroot/css/site.css",
+      "Id": "/Users/streetgenius/energy-transmission-project/src/EnergyTransmission.Web/wwwroot/css/site.css",
       "PackagePath": "staticwebassets/css/site.css"
     },
     {
-      "Id": "/Users/streetgenius/energy-transmission-project/app/EnergyTransmission.Web/wwwroot/js/site.js",
+      "Id": "/Users/streetgenius/energy-transmission-project/src/EnergyTransmission.Web/wwwroot/js/site.js",
       "PackagePath": "staticwebassets/js/site.js"
     },
     {

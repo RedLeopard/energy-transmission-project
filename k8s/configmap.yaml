@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: energy-transmission-config
+  namespace: energy-transmission
+data:
+  APP_ENV: "prod"
+  ORACLE_DB_HOST: "oracle-host.example.internal"

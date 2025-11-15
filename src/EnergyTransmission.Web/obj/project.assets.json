@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/streetgenius/energy-transmission-project/app/EnergyTransmission.Web/EnergyTransmission.Web.csproj",
+      "projectUniqueName": "/Users/streetgenius/energy-transmission-project/src/EnergyTransmission.Web/EnergyTransmission.Web.csproj",
       "projectName": "EnergyTransmission.Web",
-      "projectPath": "/Users/streetgenius/energy-transmission-project/app/EnergyTransmission.Web/EnergyTransmission.Web.csproj",
+      "projectPath": "/Users/streetgenius/energy-transmission-project/src/EnergyTransmission.Web/EnergyTransmission.Web.csproj",
       "packagesPath": "/Users/streetgenius/.nuget/packages/",
-      "outputPath": "/Users/streetgenius/energy-transmission-project/app/EnergyTransmission.Web/obj/",
+      "outputPath": "/Users/streetgenius/energy-transmission-project/src/EnergyTransmission.Web/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/streetgenius/.nuget/NuGet/NuGet.Config"
