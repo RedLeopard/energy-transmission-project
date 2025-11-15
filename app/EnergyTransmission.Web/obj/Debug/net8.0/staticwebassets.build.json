@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "Hash": "MKjJh46C1poUhild8aXDCmitKNt48a0iVg4GrmL/bbw=",
+  "Source": "EnergyTransmission.Web",
+  "BasePath": "_content/EnergyTransmission.Web",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "EnergyTransmission.Web/wwwroot",
+      "Source": "EnergyTransmission.Web",
+      "ContentRoot": "/Users/streetgenius/energy-transmission-project/app/EnergyTransmission.Web/wwwroot/",
+      "BasePath": "_content/EnergyTransmission.Web",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "/Users/streetgenius/energy-transmission-project/app/EnergyTransmission.Web/wwwroot/css/site.css",
+      "SourceId": "EnergyTransmission.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/streetgenius/energy-transmission-project/app/EnergyTransmission.Web/wwwroot/",
+      "BasePath": "_content/EnergyTransmission.Web",
+      "RelativePath": "css/site.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/css/site.css"
+    },
+    {
+      "Identity": "/Users/streetgenius/energy-transmission-project/app/EnergyTransmission.Web/wwwroot/js/site.js",
+      "SourceId": "EnergyTransmission.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/streetgenius/energy-transmission-project/app/EnergyTransmission.Web/wwwroot/",
+      "BasePath": "_content/EnergyTransmission.Web",
+      "RelativePath": "js/site.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/js/site.js"
+    }
+  ]
+}

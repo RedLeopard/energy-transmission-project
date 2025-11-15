@@ -1,0 +1,187 @@
+@page
+@{
+    ViewData["Title"] = "Edward Thornton's Energy Transmission Project";
+}
+
+<div class="et-page">
+    <header class="et-hero">
+        <div class="et-hero-left">
+            <p class="et-kicker">Hybrid Cloud • Energy Grid • St Louis</p>
+            <h1>Edward Thornton's Energy Transmission Project</h1>
+            <p class="et-subtitle">
+                An interactive energy grid walkthrough that maps physical power flow to cloud-native architecture:
+                Kubernetes, observability, CI/CD, Terraform, and Ansible.
+            </p>
+            <div class="et-badges">
+                <span class="et-badge">.NET 8</span>
+                <span class="et-badge">Kubernetes</span>
+                <span class="et-badge">Jenkins CI/CD</span>
+                <span class="et-badge">Prometheus / Grafana</span>
+                <span class="et-badge">Oracle • Terraform • Ansible</span>
+            </div>
+            <button class="et-primary-btn" id="play-tour-btn">
+                ▶ Play Energy Flow Tour
+            </button>
+        </div>
+
+        <div class="et-hero-right">
+            <div class="et-metric-card">
+                <span class="et-metric-label">Grid Health</span>
+                <span class="et-metric-value" id="metric-grid-health">99.99%</span>
+                <span class="et-metric-footnote">Target 99.95%+</span>
+            </div>
+            <div class="et-metric-card">
+                <span class="et-metric-label">Total Load</span>
+                <span class="et-metric-value" id="metric-total-load">72%</span>
+                <span class="et-metric-footnote">All regions</span>
+            </div>
+            <div class="et-metric-card">
+                <span class="et-metric-label">Active Circuits</span>
+                <span class="et-metric-value" id="metric-active-circuits">128</span>
+                <span class="et-metric-footnote">Simulated</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main animated scene -->
+    <section class="et-scene">
+        <div class="et-sky">
+            <div class="et-cloud et-cloud-1"></div>
+            <div class="et-cloud et-cloud-2"></div>
+            <div class="et-cloud et-cloud-3"></div>
+        </div>
+        <div class="et-ground"></div>
+
+        <!-- St Louis Arch silhouette -->
+        <div class="et-arch"></div>
+
+        <!-- Turbine -->
+        <div class="et-turbine">
+            <div class="et-turbine-tower"></div>
+            <div class="et-turbine-nacelle"></div>
+            <div class="et-turbine-blades">
+                <div class="et-blade"></div>
+                <div class="et-blade et-blade-2"></div>
+                <div class="et-blade et-blade-3"></div>
+            </div>
+        </div>
+
+        <!-- Stage row -->
+        <div class="et-stage-row">
+            <button class="et-stage" data-stage="generation">
+                <div class="et-stage-graphic et-plant">
+                    <div class="et-stack"></div>
+                    <div class="et-stack-sm"></div>
+                    <div class="et-solar"></div>
+                </div>
+                <div class="et-stage-label">Generating Sources</div>
+                <div class="et-stage-metric">
+                    Load <span id="metric-generation">86%</span>
+                </div>
+            </button>
+
+            <button class="et-stage" data-stage="transmission">
+                <div class="et-stage-graphic et-transmission">
+                    <div class="et-pylon"></div>
+                    <div class="et-lines"></div>
+                </div>
+                <div class="et-stage-label">Transmission Lines</div>
+                <div class="et-stage-metric">
+                    Load <span id="metric-transmission">74%</span>
+                </div>
+            </button>
+
+            <button class="et-stage" data-stage="substation">
+                <div class="et-stage-graphic et-substation">
+                    <div class="et-sub-box"></div>
+                    <div class="et-sub-cap et-sub-cap-1"></div>
+                    <div class="et-sub-cap et-sub-cap-2"></div>
+                    <div class="et-sub-cap et-sub-cap-3"></div>
+                </div>
+                <div class="et-stage-label">Substation</div>
+                <div class="et-stage-metric">
+                    Load <span id="metric-substation">69%</span>
+                </div>
+            </button>
+
+            <button class="et-stage" data-stage="distribution">
+                <div class="et-stage-graphic et-distribution">
+                    <div class="et-pole"></div>
+                    <div class="et-wires"></div>
+                </div>
+                <div class="et-stage-label">Distribution Lines</div>
+                <div class="et-stage-metric">
+                    Load <span id="metric-distribution">63%</span>
+                </div>
+            </button>
+
+            <button class="et-stage" data-stage="home">
+                <div class="et-stage-graphic et-home">
+                    <div class="et-roof"></div>
+                    <div class="et-house-body">
+                        <div class="et-window-row">
+                            <div class="et-window"></div>
+                            <div class="et-window"></div>
+                        </div>
+                    </div>
+                    <div class="et-bush"></div>
+                </div>
+                <div class="et-stage-label">Homes & Businesses</div>
+                <div class="et-stage-metric">
+                    Load <span id="metric-home">58%</span>
+                </div>
+            </button>
+        </div>
+
+        <!-- Flow line -->
+        <div class="et-flowline">
+            <div class="et-flow-orb"></div>
+            <div class="et-flow-orb et-delay-1"></div>
+            <div class="et-flow-orb et-delay-2"></div>
+        </div>
+    </section>
+
+    <!-- Dynamic details + cloud mapping -->
+    <section class="et-bottom">
+        <div class="et-bottom-left">
+            <h2>Selected Stage</h2>
+            <div id="stage-detail-title" class="et-detail-title">Generating Sources → Cloud Ingest</div>
+            <p id="stage-detail-body" class="et-detail-body">
+                Power starts at the plant: solar, wind, and thermal sources.
+                In the cloud story, this is your SCADA and IoT telemetry landing in APIs,
+                queues, and data streams that feed the rest of the platform.
+            </p>
+
+            <div class="et-detail-grid">
+                <div class="et-detail-card">
+                    <h3>Cloud Components</h3>
+                    <ul id="stage-detail-cloud" class="et-detail-list">
+                        <li>AWS IoT / MQTT brokers</li>
+                        <li>API Gateway or NGINX Ingress</li>
+                        <li>Kinesis / Kafka topics</li>
+                    </ul>
+                </div>
+                <div class="et-detail-card">
+                    <h3>Key Metrics</h3>
+                    <ul class="et-detail-list">
+                        <li>Ingest rate: <span id="metric-ingest">12.3k events / s</span></li>
+                        <li>Error rate: <span id="metric-errors">0.01%</span></li>
+                        <li>Active regions: <span id="metric-regions">4</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="et-bottom-right">
+            <h2>Live Incidents (Simulated)</h2>
+            <ul class="et-incident-list" id="incident-list">
+                <li class="et-incident et-ok">All regions nominal</li>
+                <li class="et-incident et-warn">West region: wind output fluctuating</li>
+                <li class="et-incident et-crit">South region: feeder line near capacity</li>
+            </ul>
+            <p class="et-incidents-footnote">
+                In a full build, this would be powered by Prometheus alerts, OpenSearch, or a simple incident API.
+            </p>
+        </div>
+    </section>
+</div>
