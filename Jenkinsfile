@@ -20,27 +20,26 @@ pipeline {
         stage('Restore') {
             steps {
                 echo "Running dotnet restore"
-                // Adjust path if your folder name is slightly different
-                sh 'dotnet restore src/EnergyTransmission.Web/EnergyTransmission.Web.csproj'
+                sh '/usr/local/share/dotnet/dotnet restore src/EnergyTransmission.Web/EnergyTransmission.Web.csproj'
             }
         }
 
         stage('Build') {
             steps {
                 echo "Building solution in Release mode"
-                sh 'dotnet build src/EnergyTransmission.Web/EnergyTransmission.Web.csproj -c Release --no-restore'
+                sh '/usr/local/share/dotnet/dotnet build src/EnergyTransmission.Web/EnergyTransmission.Web.csproj -c Release --no-restore'
             }
         }
 
         stage('Test') {
             when {
-                // This will only run if you later add a tests folder
+                // This will run later add a tests folder
                 expression { fileExists('tests') }
             }
             steps {
                 echo "Running unit tests"
-                // Update this path later if you add a real test project
-                sh 'dotnet test tests/Tests.csproj -c Release --no-build'
+                // Update this path later
+                sh '/usr/local/share/dotnet/dotnet test tests/Tests.csproj -c Release --no-build'
             }
         }
 
@@ -50,7 +49,6 @@ pipeline {
             }
             steps {
                 echo "Building Docker image from Dockerfile at repo root"
-                // Tags image with build number to keep them unique
                 sh 'docker build -t energy-transmission-web:${BUILD_NUMBER} .'
             }
         }
