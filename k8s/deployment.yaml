@@ -2,7 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: energy-transmission-web
-  namespace: energy-transmission
   labels:
     app: energy-transmission-web
 spec:
@@ -17,7 +16,7 @@ spec:
     spec:
       containers:
         - name: energy-transmission-web
-          image: 605383993555.dkr.ecr.us-east-1.amazonaws.com/energy-transmission-web:v1
+          image: cloudsystemsdirect/energy-transmission-web:v1
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080

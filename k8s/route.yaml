@@ -1,0 +1,12 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: energy-transmission-web
+spec:
+  to:
+    kind: Service
+    name: energy-transmission-web
+  port:
+    targetPort: http
+  tls:
+    termination: edge

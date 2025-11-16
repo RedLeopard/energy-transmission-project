@@ -2,9 +2,8 @@ apiVersion: v1
 kind: Service
 metadata:
   name: energy-transmission-web
-  namespace: energy-transmission
 spec:
-  type: LoadBalancer
+  type: ClusterIP
   selector:
     app: energy-transmission-web
   ports:
