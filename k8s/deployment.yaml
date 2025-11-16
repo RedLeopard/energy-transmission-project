@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: energy-transmission-web
-          image: <AWS_ACCOUNT_ID>.dkr.ecr.<region>.amazonaws.com/energy-transmission-web:latest
+          image: 605383993555.dkr.ecr.us-east-1.amazonaws.com/energy-transmission-web:v1
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080
