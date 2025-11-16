@@ -7,8 +7,9 @@ pipeline {
 
     environment {
         DOTNET_CLI_TELEMETRY_OPTOUT = "1"
-        // Change this value to whatever `which docker` prints on your Mac
+        // Change this value if `which docker` prints a different path
         DOCKER_CMD = "/usr/local/bin/docker"
+        IMAGE_NAME = "energy-transmission-web"
     }
 
     stages {
@@ -35,7 +36,7 @@ pipeline {
 
         stage('Test') {
             when {
-                expression { fileExists('tests') }
+                expression { fileExists("tests") }
             }
             steps {
                 echo "Running unit tests (if present)"
@@ -45,11 +46,19 @@ pipeline {
 
         stage('Docker Build') {
             when {
-                expression { fileExists('Dockerfile') }
+                expression { fileExists("Dockerfile") }
             }
             steps {
                 echo "Building Docker image from Dockerfile at repo root"
-                sh '${DOCKER_CMD} build -t energy-transmission-web:${BUILD_NUMBER} .'
+
+                // Build tagged with the Jenkins build number
+                sh '${DOCKER_CMD} build -t ${IMAGE_NAME}:${BUILD_NUMBER} .'
+
+                // Also tag as latest for convenience
+                sh '${DOCKER_CMD} tag ${IMAGE_NAME}:${BUILD_NUMBER} ${IMAGE_NAME}:latest'
+
+                echo "Built Docker images:"
+                sh '${DOCKER_CMD} images | grep ${IMAGE_NAME}'
             }
         }
     }
