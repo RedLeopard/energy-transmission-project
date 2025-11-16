@@ -7,6 +7,8 @@ pipeline {
 
     environment {
         DOTNET_CLI_TELEMETRY_OPTOUT = "1"
+        // Change this value to whatever `which docker` prints on your Mac
+        DOCKER_CMD = "/usr/local/bin/docker"
     }
 
     stages {
@@ -33,12 +35,10 @@ pipeline {
 
         stage('Test') {
             when {
-                // This will run later add a tests folder
                 expression { fileExists('tests') }
             }
             steps {
-                echo "Running unit tests"
-                // Update this path later
+                echo "Running unit tests (if present)"
                 sh '/usr/local/share/dotnet/dotnet test tests/Tests.csproj -c Release --no-build'
             }
         }
@@ -49,7 +49,7 @@ pipeline {
             }
             steps {
                 echo "Building Docker image from Dockerfile at repo root"
-                sh 'docker build -t energy-transmission-web:${BUILD_NUMBER} .'
+                sh '${DOCKER_CMD} build -t energy-transmission-web:${BUILD_NUMBER} .'
             }
         }
     }
