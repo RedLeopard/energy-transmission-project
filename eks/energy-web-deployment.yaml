@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: energy-transmission-web
+  namespace: energy-transmission
+  labels:
+    app: energy-transmission-web
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: energy-transmission-web
+  template:
+    metadata:
+      labels:
+        app: energy-transmission-web
+    spec:
+      containers:
+        - name: energy-transmission-web
+          image: 605383993555.dkr.ecr.us-east-1.amazonaws.com/energy-transmission-web:v1
+          ports:
+            - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: energy-transmission-web
+  namespace: energy-transmission
+spec:
+  selector:
+    app: energy-transmission-web
+  ports:
+    - port: 80
+      targetPort: 8080
+      protocol: TCP
+  type: ClusterIP

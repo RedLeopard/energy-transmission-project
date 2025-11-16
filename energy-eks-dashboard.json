@@ -1,0 +1,36 @@
+{
+  "dashboard": {
+    "title": "Energy Transmission - EKS Monitoring",
+    "uid": "energy-eks-monitoring",
+    "timezone": "browser",
+    "schemaVersion": 38,
+    "version": 1,
+    "panels": [
+      {
+        "type": "timeseries",
+        "title": "EKS - Energy Transmission Pod CPU",
+        "gridPos": { "h": 8, "w": 24, "x": 0, "y": 0 },
+        "targets": [
+          {
+            "expr": "sum(rate(container_cpu_usage_seconds_total{namespace=\"energy-transmission\"}[5m])) by (pod)",
+            "legendFormat": "{{pod}}",
+            "refId": "A"
+          }
+        ]
+      },
+      {
+        "type": "timeseries",
+        "title": "EKS - Energy Transmission Pod Memory",
+        "gridPos": { "h": 8, "w": 24, "x": 0, "y": 8 },
+        "targets": [
+          {
+            "expr": "sum(container_memory_usage_bytes{namespace=\"energy-transmission\"}) by (pod)",
+            "legendFormat": "{{pod}}",
+            "refId": "A"
+          }
+        ]
+      }
+    ]
+  },
+  "overwrite": true
+}
