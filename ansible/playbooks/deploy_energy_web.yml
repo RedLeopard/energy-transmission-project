@@ -1,0 +1,47 @@
+---
+- name: Deploy Energy Transmission Web container locally
+  hosts: energy_web
+  become: false
+
+  vars:
+    image_name: "energy-transmission-web"
+    image_tag: "latest"
+    container_name: "energy-transmission-web"
+    app_port: 8081        # host port
+    container_port: 8080  # container port from your Dockerfile
+
+  tasks:
+    - name: Show Docker version (sanity check)
+      ansible.builtin.shell: docker --version
+      register: docker_version
+      changed_when: false
+
+    - name: Print Docker version
+      ansible.builtin.debug:
+        msg: "Using {{ docker_version.stdout }}"
+
+    - name: Stop existing container if running
+      ansible.builtin.shell: |
+        docker stop {{ container_name }} || true
+      ignore_errors: true
+
+    - name: Remove existing container if present
+      ansible.builtin.shell: |
+        docker rm {{ container_name }} || true
+      ignore_errors: true
+
+    - name: Run Energy Transmission Web container
+      ansible.builtin.shell: |
+        docker run -d \
+          --name {{ container_name }} \
+          -p {{ app_port }}:{{ container_port }} \
+          {{ image_name }}:{{ image_tag }}
+
+    - name: Show running containers matching this app
+      ansible.builtin.shell: docker ps --filter "name={{ container_name }}" --format "table {{'{{'}}.ID{{'}}'}}\t{{'{{'}}.Image{{'}}'}}\t{{'{{'}}.Status{{'}}'}}"
+      register: running_containers
+      changed_when: false
+
+    - name: Print running container info
+      ansible.builtin.debug:
+        msg: "{{ running_containers.stdout }}"
