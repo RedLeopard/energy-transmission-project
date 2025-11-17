@@ -5,7 +5,7 @@ Unlike cluster-level automation (EKS/OpenShift), this playbook focuses on **runn
 
 ---
 
-## 🚀 What This Playbook Actually Does
+## What This Playbook Does
 
 This playbook performs one job:  
 **Stop, remove, and redeploy the Energy Transmission Web container locally using Docker.**
