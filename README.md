@@ -160,39 +160,41 @@ No sensitive credentials are stored in the repo.
 ## 📸 Visual Evidence
 
 ### ✔ Overview Image  
-<img width="1430" height="677" alt="Image" src="https://github.com/user-attachments/assets/7791e203-e3e9-4a5e-a5be-f9fe66477e6d" />
+<img width="1024" height="1024" alt="Image" src="https://github.com/user-attachments/assets/5bc691c2-4345-4cf1-9cef-139ce8f5d61a" /> 
 
 ---
 
 ### ✔ OpenShift  
+<img width="1421" height="771" alt="Image" src="https://github.com/user-attachments/assets/57bff71c-5020-453e-a034-86d6ffbc1939" />
 <img width="1421" height="771" alt="Image" src="https://github.com/user-attachments/assets/a1e8b53e-727a-41b1-b179-765df2bc7d3e" />
 
 ---
 
-### ✔ EKS Cluster  
+### ✔ EKS Cluster 
+<img width="1421" height="771" alt="Image" src="https://github.com/user-attachments/assets/a1e8b53e-727a-41b1-b179-765df2bc7d3e" />
 <img width="1421" height="771" alt="Image" src="https://github.com/user-attachments/assets/dc886454-4fc7-4eed-976d-92a42a23ad78" />
 
 ---
 
 ### ✔ ECR Repository  
-<img width="1421" height="769" alt="Image" src="https://github.com/user-attachments/assets/4d6e7604-6356-449f-a329-e56be3f63f11" />
+<img width="1430" height="677" alt="Image" src="https://github.com/user-attachments/assets/7791e203-e3e9-4a5e-a5be-f9fe66477e6d" />
 
 ---
 
 ### ✔ Jenkins Pipeline  
+<img width="1421" height="769" alt="Image" src="https://github.com/user-attachments/assets/4d6e7604-6356-449f-a329-e56be3f63f11" />
 <img width="1421" height="769" alt="Image" src="https://github.com/user-attachments/assets/a40bee00-7965-44c9-b82e-f2eee063cf92" />
-
-<img width="1421" height="771" alt="Image" src="https://github.com/user-attachments/assets/57bff71c-5020-453e-a034-86d6ffbc1939" />
 
 ---
 
 ### ✔ Grafana  
-<img width="1421" height="771" alt="Image" src="https://github.com/user-attachments/assets/c45691bd-b4b0-422c-a025-ca37c93894ce" /> 
+<img width="1421" height="771" alt="Image" src="https://github.com/user-attachments/assets/dc886454-4fc7-4eed-976d-92a42a23ad78" />
+
 
 ---
 
 ### ✔ Oracle Database  
-<img width="1024" height="1024" alt="Image" src="https://github.com/user-attachments/assets/5bc691c2-4345-4cf1-9cef-139ce8f5d61a" /> 
+<img width="1421" height="771" alt="Image" src="https://github.com/user-attachments/assets/c45691bd-b4b0-422c-a025-ca37c93894ce" />
 
 ---
 
