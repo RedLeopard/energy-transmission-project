@@ -159,20 +159,13 @@ No sensitive credentials are stored in the repo.
 
 ## 📸 Visual Evidence
 
-### ✔ Overview Image  
-<img width="1024" height="1024" alt="Image" src="https://github.com/user-attachments/assets/5bc691c2-4345-4cf1-9cef-139ce8f5d61a" /> 
-
----
-
 ### ✔ OpenShift  
 <img width="1421" height="771" alt="Image" src="https://github.com/user-attachments/assets/57bff71c-5020-453e-a034-86d6ffbc1939" />
-<img width="1421" height="771" alt="Image" src="https://github.com/user-attachments/assets/a1e8b53e-727a-41b1-b179-765df2bc7d3e" />
 
 ---
 
 ### ✔ EKS Cluster 
 <img width="1421" height="771" alt="Image" src="https://github.com/user-attachments/assets/a1e8b53e-727a-41b1-b179-765df2bc7d3e" />
-<img width="1421" height="771" alt="Image" src="https://github.com/user-attachments/assets/dc886454-4fc7-4eed-976d-92a42a23ad78" />
 
 ---
 
