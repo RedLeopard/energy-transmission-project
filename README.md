@@ -160,39 +160,39 @@ No sensitive credentials are stored in the repo.
 ## 📸 Visual Evidence
 
 ### ✔ Overview Image  
-![Energy Transmission Overview](assets/project2.png)
+<img width="1430" height="677" alt="Image" src="https://github.com/user-attachments/assets/7791e203-e3e9-4a5e-a5be-f9fe66477e6d" />
 
 ---
 
 ### ✔ OpenShift  
-![OpenShift Workloads](assets/openshift.png)
+<img width="1421" height="771" alt="Image" src="https://github.com/user-attachments/assets/a1e8b53e-727a-41b1-b179-765df2bc7d3e" />
 
 ---
 
 ### ✔ EKS Cluster  
-![EKS Cluster](assets/eks1.png)
+<img width="1421" height="771" alt="Image" src="https://github.com/user-attachments/assets/dc886454-4fc7-4eed-976d-92a42a23ad78" />
 
 ---
 
 ### ✔ ECR Repository  
-![ECR Repository](assets/ecr.png)
+<img width="1421" height="769" alt="Image" src="https://github.com/user-attachments/assets/4d6e7604-6356-449f-a329-e56be3f63f11" />
 
 ---
 
 ### ✔ Jenkins Pipeline  
-![Jenkins Pipeline](assets/jenkins.png)
+<img width="1421" height="769" alt="Image" src="https://github.com/user-attachments/assets/a40bee00-7965-44c9-b82e-f2eee063cf92" />
 
-![Jenkins Console Output](assets/jenkins2.png)
+<img width="1421" height="771" alt="Image" src="https://github.com/user-attachments/assets/57bff71c-5020-453e-a034-86d6ffbc1939" />
 
 ---
 
 ### ✔ Grafana  
-![Grafana Dashboard](assets/grafana.png)
+<img width="1421" height="771" alt="Image" src="https://github.com/user-attachments/assets/c45691bd-b4b0-422c-a025-ca37c93894ce" /> 
 
 ---
 
 ### ✔ Oracle Database  
-![Oracle ADB Metrics](assets/oracle.png)
+<img width="1024" height="1024" alt="Image" src="https://github.com/user-attachments/assets/5bc691c2-4345-4cf1-9cef-139ce8f5d61a" /> 
 
 ---
 
