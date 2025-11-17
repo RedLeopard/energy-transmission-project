@@ -13,34 +13,33 @@ A realistic utility-style platform that shows how an energy company could deploy
 ```mermaid
 flowchart TD
     A[energy-transmission-project/] --> B[app/]
-    B --> B1[EnergyTransmission.Web<br/>(.NET 8 Web App)]
+    B --> B1["EnergyTransmission.Web\n(.NET 8 Web App)"]
 
     A --> C[ansible/]
-    C --> C1[Playbooks<br/>(Automation WIP)]
+    C --> C1["Playbooks\n(Automation WIP)"]
 
     A --> D[docker/]
-    D --> D1[Dockerfiles<br/>Container Builds]
+    D --> D1["Dockerfiles\nContainer Builds"]
 
     A --> E[infra/]
-    E --> E1[Terraform / IaC<br/>(Placeholders)]
+    E --> E1["Terraform / IaC\n(Placeholders)"]
 
     A --> F[k8s/]
-    F --> F1[Deployment.yaml]
-    F --> F2[Service.yaml]
-    F --> F3[Namespace.yaml]
+    F --> F1[deployment.yaml]
+    F --> F2[service.yaml]
+    F --> F3[namespace.yaml]
 
     A --> G[monitoring/]
-    G --> G1[Prometheus Config]
-    G --> G2[Grafana Dashboards]
+    G --> G1["Prometheus Config"]
+    G --> G2["Grafana Dashboards"]
 
     A --> H[jenkins/]
-    H --> H1[Jenkinsfile<br/>(CI/CD Pipeline)]
+    H --> H1["Jenkinsfile\n(CI/CD Pipeline)"]
 
     A --> I[docs/]
-    I --> I1[Architecture Diagrams]
-    I --> I2[Interview Notes]
+    I --> I1["Architecture Diagrams"]
+    I --> I2["Interview Notes"]
 ```
-
 
 
 This project is built as a full end-to-end demonstration suitable for interviews, portfolio presentations, and real-world cloud engineering discussions.
