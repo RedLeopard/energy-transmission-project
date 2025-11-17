@@ -92,8 +92,6 @@ ansible/
 ├─ deploy-local-docker.yaml # This exact playbook
 └─ README.md # This file
 
-(If your file is named differently, update the name above.)
-
 ---
 
 ## ▶️ How to Run
