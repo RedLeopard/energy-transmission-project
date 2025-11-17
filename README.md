@@ -39,6 +39,7 @@ flowchart TD
     A --> I[docs/]
     I --> I1[Architecture Diagrams]
     I --> I2[Interview Notes]
+```
 
 
 
