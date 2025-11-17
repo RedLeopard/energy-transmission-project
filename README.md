@@ -51,11 +51,6 @@ This project is built as a full end-to-end demonstration suitable for interviews
 
 ---
 
-## 📁 Repository Structure
-
-
----
-
 ## 🌐 Project Summary
 
 This project mirrors a real utility company workflow:
