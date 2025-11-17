@@ -8,30 +8,38 @@ A realistic utility-style platform that shows how an energy company could deploy
 - **Prometheus** and **Grafana** for observability
 - **Oracle Autonomous Database (ADB)** for grid and transmission data storage
 
-Repo Strucure 
+## Repo Structure
 
----
-config:
-  layout: dagre
----
-flowchart LR
- subgraph Cluster["OpenShift / K8s Cluster<br>(Ubuntu Server, On-Prem)"]
-        Pod["📦 Pod<br>(.NET Energy App)"]
-        Prometheus["📈 Prometheus"]
-        Grafana["📊 Grafana Dashboards"]
-        OracleDB["OracleDB"]
-  end
-    Dev["👨‍💻 Developer"] -- Push Code --> Jenkins["🧰 Jenkins"]
-    Dev -- Webhook --> GitHub["🐙 GitHub"]
-    GitHub --> Docker["Docker"]
-    Jenkins -- Build Docker --> Docker
-    Jenkins -- Manual Deploy --> Cluster
-    Docker -- Docker Image --> App["App"]
-    App -- Oracle SQL --> OracleDB
-    App -- Deploy Pod --> Cluster
-    Pod --> Prometheus
-    Prometheus --> Grafana
-    Grafana --> OracleDB
+```mermaid
+flowchart TD
+    A[energy-transmission-project/] --> B[app/]
+    B --> B1[EnergyTransmission.Web<br/>(.NET 8 Web App)]
+
+    A --> C[ansible/]
+    C --> C1[Playbooks<br/>(Automation WIP)]
+
+    A --> D[docker/]
+    D --> D1[Dockerfiles<br/>Container Builds]
+
+    A --> E[infra/]
+    E --> E1[Terraform / IaC<br/>(Placeholders)]
+
+    A --> F[k8s/]
+    F --> F1[Deployment.yaml]
+    F --> F2[Service.yaml]
+    F --> F3[Namespace.yaml]
+
+    A --> G[monitoring/]
+    G --> G1[Prometheus Config]
+    G --> G2[Grafana Dashboards]
+
+    A --> H[jenkins/]
+    H --> H1[Jenkinsfile<br/>(CI/CD Pipeline)]
+
+    A --> I[docs/]
+    I --> I1[Architecture Diagrams]
+    I --> I2[Interview Notes]
+
 
 
 This project is built as a full end-to-end demonstration suitable for interviews, portfolio presentations, and real-world cloud engineering discussions.
